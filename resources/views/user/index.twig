@@ -1,0 +1,41 @@
+{% extends 'menu_page.twig' %}
+
+{% block subtitle %}
+    Пользователи <a href="{{route('user.create')}}" class="btn btn-success" title="Добавить пользователя"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+{% endblock %}
+
+{% block inner_content %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>№ п/п</th>
+                <th>id</th>
+                <th>Имя</th>
+                <th>E-mail</th>
+                <th>Пароль</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{u.id}}</td>
+                <td>{{u.name}} {{currentUser.id == u.id ? ' <em>(Вы)</em>'}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.password|slice(0,20)}}... (<a href="{{route('user.edit', {'id' : u.id})}}" title="Изменить пароль">Изменить</a>)</td>
+                <td>
+                    {% if currentUser.id != u.id %}
+                        <form action="{{route('user.destroy', {'id' : u.id})}}" method="post" accept-charset="utf-8">
+                            {{ csrf_field() }}
+                            {{ method_field('delete') }}
+                            <input type="hidden" name="id" value="{{user.id}}">      
+                            <input type="submit" class="btn btn-danger" name="submit" value="Удалить">
+                        </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}   

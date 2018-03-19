@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    height: 100%;    
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* a:not(:focus) {
+   color: #0082BA; 
+}
+ */
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover 
+{
+    background-color: #0082BA;
+}
+
+
+header {
+    background: #0082BA;
+}
+
+header a, header a:hover, header a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+header h1 {
+    font-weight: bold;
+}
+
+.navbar-nav li {
+    height: 70px;
+}
+
+.navbar-nav li a {
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.navbar-nav > li > form {
+    position: relative;
+    height: 70px;
+}
+
+.navbar-nav > li > form > a{
+    padding: 15px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > form:hover
+ {
+    background: rgba(255,255,255,0.2);
+}
+
+.content {
+    padding-bottom: 54px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding-top: 24px;
+    bottom: 0;
+    background-color: #f8f8f8;
+}
+
+/* Form */
+
+form > * {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 80%;
+}
+
+.btn-panel {
+    padding:  20px 0;
+}
+
+
+/* ==== Login page ==== */
+
+.login {
+    width:  600px;
+    margin: 0 auto;
+    padding: 0 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login input {
+    margin: 0 auto 10px;
+}
+
+.login input:not([name="action"])
+{
+    display: block;
+}
+
+.login label {
+    display: block;
+}
+
+.error {
+    font-weight: bold;
+    font-size: 0.8em;
+    color:  red;
+}
