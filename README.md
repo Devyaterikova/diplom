@@ -42,6 +42,6 @@ php artisan db::seed
 * E-mail: **admin@admin.com**
 * Пароль: **admin**
 
-
-
+Cсылка на рабочий проект
+http://u9118003.beget.tech/index/1
 
