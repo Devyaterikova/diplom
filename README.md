@@ -46,4 +46,5 @@ php artisan db::seed
 http://u9118003.beget.tech/index/1
 
 ## Описание системы
+https://docs.google.com/document/d/1sCpK8XE4g29XUWxjnCPF8WePN5cwa1ZHB9NOCghCfr8/edit?usp=sharing
 
